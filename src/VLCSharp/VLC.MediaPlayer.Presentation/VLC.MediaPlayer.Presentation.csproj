@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -50,9 +51,9 @@
       <Project>{b90c9f2f-483c-4154-ab74-cee65c37168c}</Project>
       <Name>VLC.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\VLC.MediaReader.LocalFile\VLC.MediaReader.LocalFile.csproj">
+    <ProjectReference Include="..\VLC.MediaReader.LocalFile\VLC.MediaLibrary.Repository.LocalFile.csproj">
       <Project>{ed2c9261-4762-4e40-84b0-3c227b0ff75d}</Project>
-      <Name>VLC.MediaReader.LocalFile</Name>
+      <Name>VLC.MediaLibrary.Repository.LocalFile</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

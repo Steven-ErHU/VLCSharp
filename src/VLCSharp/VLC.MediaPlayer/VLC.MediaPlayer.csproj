@@ -84,9 +84,21 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VLC.Common\VLC.Common.csproj">
+      <Project>{B90C9F2F-483C-4154-AB74-CEE65C37168C}</Project>
+      <Name>VLC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VLC.MediaPlayer.Presentation\VLC.MediaPlayer.Presentation.csproj">
+      <Project>{FEAB2093-19F7-4DCE-8E84-5FFCCF0C98DC}</Project>
+      <Name>VLC.MediaPlayer.Presentation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VLC.MediaPlayer.View\VLC.MediaPlayer.View.csproj">
       <Project>{5F27B1AE-95DC-4057-BE9F-D0546269DF81}</Project>
       <Name>VLC.MediaPlayer.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VLC.MediaReader.LocalFile\VLC.MediaLibrary.Repository.LocalFile.csproj">
+      <Project>{ED2C9261-4762-4E40-84B0-3C227B0FF75D}</Project>
+      <Name>VLC.MediaLibrary.Repository.LocalFile</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

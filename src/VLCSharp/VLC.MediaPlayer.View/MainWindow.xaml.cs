@@ -23,5 +23,11 @@ namespace VLC.MediaPlayer.View
         {
             InitializeComponent();
         }
+
+        public void LoadMediaLibrary(MediaLibrary mediaLibrary)
+        {
+            MainGgrid.Children.Add(mediaLibrary);
+            mediaLibrary.Margin = new Thickness(5);
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using VLC.Common;
 
 namespace VLC.MediaPlayer.Presentation
@@ -10,6 +11,13 @@ namespace VLC.MediaPlayer.Presentation
     public class MediaLibraryModel : INotifyPropertyChanged
     {
         private IMediaReader _mediaReader;
+        public IMediaReader MediaReader
+        {
+            get
+            {
+                return _mediaReader;
+            }
+        }
 
         public MediaLibraryModel(IMediaReader mediaReader)
         {
@@ -42,6 +50,35 @@ namespace VLC.MediaPlayer.Presentation
                 }
             }
         }
-        
+
+        private MediaOpenFileCommand _mediaOpenFileCommand = new MediaOpenFileCommand();
+        public MediaOpenFileCommand OpenFileCommand
+        {
+            get
+            {
+                if (_mediaOpenFileCommand.ViewModel == null)
+                {
+                    _mediaOpenFileCommand.ViewModel = this;
+                }
+                return _mediaOpenFileCommand;
+            }
+        }
+
+
+        private MediaOpenFolderCommand _mediaOpenFolderCommand = new MediaOpenFolderCommand();
+        public MediaOpenFolderCommand OpenFolderCommand
+        {
+            get
+            {
+                if (_mediaOpenFolderCommand.ViewModel == null)
+                {
+                    _mediaOpenFolderCommand.ViewModel = this;
+                }
+
+                return _mediaOpenFolderCommand;
+            }
+        }
+
+
     }
 }

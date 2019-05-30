@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-VLC.PRS", "0-VLC.PRS", "{B8C5C54E-8412-4BC9-9E30-759FAEB5984B}"
 	ProjectSection(SolutionItems) = preProject
@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-VLC.Common", "5-VLC.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLC.MediaPlayer.Presentation", "VLC.MediaPlayer.Presentation\VLC.MediaPlayer.Presentation.csproj", "{FEAB2093-19F7-4DCE-8E84-5FFCCF0C98DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLC.MediaReader.LocalFile", "VLC.MediaReader.LocalFile\VLC.MediaReader.LocalFile.csproj", "{ED2C9261-4762-4E40-84B0-3C227B0FF75D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLC.MediaLibrary.Repository.LocalFile", "VLC.MediaReader.LocalFile\VLC.MediaLibrary.Repository.LocalFile.csproj", "{ED2C9261-4762-4E40-84B0-3C227B0FF75D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VLC.MediaPlayer", "VLC.MediaPlayer\VLC.MediaPlayer.csproj", "{335B6766-F3B7-4AD0-BE5B-E8F42DBD4E14}"
 EndProject
@@ -108,5 +108,8 @@ Global
 		{ED2C9261-4762-4E40-84B0-3C227B0FF75D} = {A5B1D1DA-0986-4702-B38D-C09067A6A839}
 		{335B6766-F3B7-4AD0-BE5B-E8F42DBD4E14} = {BF5ABAD6-DF95-48C0-B1F0-F095BD43AAAB}
 		{5F27B1AE-95DC-4057-BE9F-D0546269DF81} = {9372B441-20C8-40D0-AE61-ADBA1D37D592}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E77AA60E-FAFB-4DAE-B02D-26FC294DD6C1}
 	EndGlobalSection
 EndGlobal
