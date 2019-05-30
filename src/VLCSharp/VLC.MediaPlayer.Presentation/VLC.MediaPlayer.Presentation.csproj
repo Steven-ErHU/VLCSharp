@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B90C9F2F-483C-4154-AB74-CEE65C37168C}</ProjectGuid>
+    <ProjectGuid>{FEAB2093-19F7-4DCE-8E84-5FFCCF0C98DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VLC.Common</RootNamespace>
-    <AssemblyName>VLC.Common</AssemblyName>
+    <RootNamespace>VLC.MediaPlayer.Presentation</RootNamespace>
+    <AssemblyName>VLC.MediaPlayer.Presentation</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,24 +30,30 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ErrorProcessor.cs" />
-    <Compile Include="IMediaAccessor.cs" />
-    <Compile Include="MediaFile.cs" />
-    <Compile Include="MediaFileNode.cs" />
-    <Compile Include="MediaState.cs" />
+    <Compile Include="MediaLibraryCommand.cs" />
+    <Compile Include="MediaLibraryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VLC.Common\VLC.Common.csproj">
+      <Project>{b90c9f2f-483c-4154-ab74-cee65c37168c}</Project>
+      <Name>VLC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VLC.MediaReader.LocalFile\VLC.MediaReader.LocalFile.csproj">
+      <Project>{ed2c9261-4762-4e40-84b0-3c227b0ff75d}</Project>
+      <Name>VLC.MediaReader.LocalFile</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

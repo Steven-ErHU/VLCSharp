@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B90C9F2F-483C-4154-AB74-CEE65C37168C}</ProjectGuid>
+    <ProjectGuid>{ED2C9261-4762-4E40-84B0-3C227B0FF75D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VLC.Common</RootNamespace>
-    <AssemblyName>VLC.Common</AssemblyName>
+    <RootNamespace>VLC.MediaReader.LocalFile</RootNamespace>
+    <AssemblyName>VLC.MediaReader.LocalFile</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,23 +30,24 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ErrorProcessor.cs" />
-    <Compile Include="IMediaAccessor.cs" />
-    <Compile Include="MediaFile.cs" />
-    <Compile Include="MediaFileNode.cs" />
-    <Compile Include="MediaState.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CommonDef\GlobleDef.cs" />
+    <Compile Include="MediaLib\MediaAccessor.cs" />
+    <Compile Include="MediaLib\MediaFile.cs" />
+    <Compile Include="MediaLib\MediaFileNode.cs" />
+    <Compile Include="MediaLib\MediaManifest.cs" />
+    <Compile Include="MediaLib\MediaState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

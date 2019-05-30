@@ -15,12 +15,6 @@ namespace VLC.Common
             switch (errorCode)
             {
                 case 31: msg = "File not exists"; break;
-                case 32: msg = ""; break;
-                case 33: msg = ""; break;
-                case 34: msg = ""; break;
-                case 35: msg = ""; break;
-                case 36: msg = ""; break;
-                case 37: msg = ""; break;
                 default: msg = "Unknow Error!"; break;
 
             }
