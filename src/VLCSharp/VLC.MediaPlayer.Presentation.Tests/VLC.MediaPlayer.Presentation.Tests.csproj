@@ -59,13 +59,13 @@
       <Project>{b90c9f2f-483c-4154-ab74-cee65c37168c}</Project>
       <Name>VLC.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VLC.MediaLibrary.Repository.LocalFile\VLC.MediaLibrary.Repository.LocalFile.csproj">
+      <Project>{fd09dbce-94fa-4a86-8843-e334673ff946}</Project>
+      <Name>VLC.MediaLibrary.Repository.LocalFile</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VLC.MediaPlayer.Presentation\VLC.MediaPlayer.Presentation.csproj">
       <Project>{FEAB2093-19F7-4DCE-8E84-5FFCCF0C98DC}</Project>
       <Name>VLC.MediaPlayer.Presentation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\VLC.MediaReader.Repository.LocalFile\VLC.MediaLibrary.Repository.LocalFile\VLC.MediaLibrary.Repository.LocalFile.csproj">
-      <Project>{FD09DBCE-94FA-4A86-8843-E334673FF946}</Project>
-      <Name>VLC.MediaLibrary.Repository.LocalFile</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

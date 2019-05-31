@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\VLC.Common\VLC.Common.csproj">
+    <ProjectReference Include="..\VLC.Common\VLC.Common.csproj">
       <Project>{b90c9f2f-483c-4154-ab74-cee65c37168c}</Project>
       <Name>VLC.Common</Name>
     </ProjectReference>
