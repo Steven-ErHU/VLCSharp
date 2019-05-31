@@ -96,8 +96,8 @@
       <Project>{5F27B1AE-95DC-4057-BE9F-D0546269DF81}</Project>
       <Name>VLC.MediaPlayer.View</Name>
     </ProjectReference>
-    <ProjectReference Include="..\VLC.MediaReader.LocalFile\VLC.MediaLibrary.Repository.LocalFile.csproj">
-      <Project>{ED2C9261-4762-4E40-84B0-3C227B0FF75D}</Project>
+    <ProjectReference Include="..\VLC.MediaReader.Repository.LocalFile\VLC.MediaLibrary.Repository.LocalFile\VLC.MediaLibrary.Repository.LocalFile.csproj">
+      <Project>{FD09DBCE-94FA-4A86-8843-E334673FF946}</Project>
       <Name>VLC.MediaLibrary.Repository.LocalFile</Name>
     </ProjectReference>
   </ItemGroup>

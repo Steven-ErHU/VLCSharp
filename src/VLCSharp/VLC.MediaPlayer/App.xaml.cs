@@ -4,9 +4,9 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Windows;
+using VLC.MediaLibrary.Repository.LocalFile;
 using VLC.MediaPlayer.Presentation;
 using VLC.MediaPlayer.View;
-using VLC.MediaReader.LocalFile;
 
 namespace VLC.MediaPlayer
 {
@@ -34,7 +34,7 @@ namespace VLC.MediaPlayer
         private void ComposeObjects()
         {
             MediaLibraryModel viewModel = new MediaLibraryModel(new LocalFileRepository());
-            MediaLibrary ml = new MediaLibrary(viewModel);
+            View.MediaLibrary ml = new View.MediaLibrary(viewModel);
             var mw = new MainWindow();
             mw.LoadMediaLibrary(ml);
             Application.Current.MainWindow = mw;

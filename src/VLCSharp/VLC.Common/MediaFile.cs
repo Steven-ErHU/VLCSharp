@@ -13,6 +13,7 @@ namespace VLC.Common
         public string Author { get; set; }
         public string FileType { get; set; }
         public string Source { get; set; }
+        public int Depth { get; set; }
 
         private long _size;
         public long Size
@@ -26,8 +27,6 @@ namespace VLC.Common
         }
         public string SizeText { get; set; }
         public MediaState State { get; set; }
-
-        public MediaFileNode Node { get; set; }
 
         private string GetSizeText(long size)
         {

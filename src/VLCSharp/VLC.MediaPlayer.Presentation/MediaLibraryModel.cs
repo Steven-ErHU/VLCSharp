@@ -34,51 +34,86 @@ namespace VLC.MediaPlayer.Presentation
             }
         }
 
-        private MediaFileNode _rootNode;
-        public MediaFileNode MediaRootNode
+        private IEnumerable<MediaFile> _medias = new List<MediaFile>();
+        public IEnumerable<MediaFile> Medias
         {
             get
             {
-                return _rootNode;
+                return _medias;
             }
-            set
+            private set
             {
-                if (_rootNode != value)
+                if (_medias != value)
                 {
-                    _rootNode = value;
-                    RaisePropertyChanged("MediaRootNode");
+                    _medias = value;
+                    RaisePropertyChanged("Medias");
                 }
             }
         }
 
-        private MediaOpenFileCommand _mediaOpenFileCommand = new MediaOpenFileCommand();
-        public MediaOpenFileCommand OpenFileCommand
+        private MediaAccessorResult _result;
+        public MediaAccessorResult Result
         {
             get
             {
-                if (_mediaOpenFileCommand.ViewModel == null)
+                return _result;
+            }
+            private set
+            {
+                _result = value;
+                if (_result != null && _result.ResultCode == (uint)ErrorCode.Success)
                 {
-                    _mediaOpenFileCommand.ViewModel = this;
+                    if (_result.IsOverrideResult)
+                    {
+                        Medias = _result.Medias;
+                    }
+                    else
+                    {
+                        var medias = new List<MediaFile>(_result.Medias);
+                        medias.AddRange(Medias);
+                        Medias = medias;
+                    }
+                }
+            }
+        }
+
+        private RelayCommand _mediaOpenFileCommand;
+        public RelayCommand OpenFileCommand
+        {
+            get
+            {
+                if (_mediaOpenFileCommand == null)
+                {
+                    _mediaOpenFileCommand = new RelayCommand(param => Result = _mediaReader.OpenFile((param as IMediaLibraryView).MediaFilename), param => true);
                 }
                 return _mediaOpenFileCommand;
             }
         }
 
-
-        private MediaOpenFolderCommand _mediaOpenFolderCommand = new MediaOpenFolderCommand();
-        public MediaOpenFolderCommand OpenFolderCommand
+        private RelayCommand _mediaOpenFolderCommand;
+        public RelayCommand OpenFolderCommand
         {
             get
             {
-                if (_mediaOpenFolderCommand.ViewModel == null)
+                if (_mediaOpenFolderCommand == null)
                 {
-                    _mediaOpenFolderCommand.ViewModel = this;
+                    _mediaOpenFolderCommand = new RelayCommand(param => Result = _mediaReader.OpenFolder((param as IMediaLibraryView).MediaFolderName), param => true);
                 }
-
                 return _mediaOpenFolderCommand;
             }
         }
 
-
+        private RelayCommand _mediaClearCommand;
+        public RelayCommand ClearLibraryCommand
+        {
+            get
+            {
+                if (_mediaClearCommand == null)
+                {
+                    _mediaClearCommand = new RelayCommand(param => Medias = new List<MediaFile>(), param => true);
+                }
+                return _mediaClearCommand;
+            }
+        }
     }
 }

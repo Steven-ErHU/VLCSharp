@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FEAB2093-19F7-4DCE-8E84-5FFCCF0C98DC}</ProjectGuid>
+    <ProjectGuid>{FD09DBCE-94FA-4A86-8843-E334673FF946}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VLC.MediaPlayer.Presentation</RootNamespace>
-    <AssemblyName>VLC.MediaPlayer.Presentation</AssemblyName>
+    <RootNamespace>VLC.MediaLibrary.Repository.LocalFile</RootNamespace>
+    <AssemblyName>VLC.MediaLibrary.Repository.LocalFile</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,24 +29,23 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IMediaLibraryView.cs" />
-    <Compile Include="MediaLibraryModel.cs" />
+    <Compile Include="LocalFileRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VLC.Common\VLC.Common.csproj">
+    <ProjectReference Include="..\..\VLC.Common\VLC.Common.csproj">
       <Project>{b90c9f2f-483c-4154-ab74-cee65c37168c}</Project>
       <Name>VLC.Common</Name>
     </ProjectReference>
